@@ -140,6 +140,7 @@
   background-color: #e5e5e5;
   display: flex;
   justify-content: space-between;
+
   .herobg {
     width: 45%;
     justify-self: flex-end;
@@ -158,6 +159,40 @@
         font-size: 6rem;
         font-weight: 800;
       }
+    }
+  }
+
+  .ellipse {
+    position: absolute;
+
+    &--1 {
+      width: 7%;
+      height: auto;
+
+      top: 20%;
+      left: 60%;
+    }
+
+    &--2 {
+      width: 5%;
+      height: auto;
+      top: 45%;
+      left: 50%;
+    }
+
+    &--3 {
+      width: 6%;
+      height: auto;
+      top: 5%;
+      left: -2%;
+    }
+
+    &--4 {
+      width: 1.5%;
+      height: auto;
+
+      top: 18%;
+      left: 68%;
     }
   }
 }

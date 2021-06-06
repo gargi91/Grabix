@@ -285,6 +285,28 @@ hr {
       .slide--main__content .heading--main span {
         font-size: 6rem;
         font-weight: 800; }
+  .slide--main .ellipse {
+    position: absolute; }
+    .slide--main .ellipse--1 {
+      width: 7%;
+      height: auto;
+      top: 20%;
+      left: 60%; }
+    .slide--main .ellipse--2 {
+      width: 5%;
+      height: auto;
+      top: 45%;
+      left: 50%; }
+    .slide--main .ellipse--3 {
+      width: 6%;
+      height: auto;
+      top: 5%;
+      left: -2%; }
+    .slide--main .ellipse--4 {
+      width: 1.5%;
+      height: auto;
+      top: 18%;
+      left: 68%; }
 
 .services {
   display: grid;
