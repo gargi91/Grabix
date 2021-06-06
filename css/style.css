@@ -153,8 +153,7 @@ hr {
     box-shadow: var(--box-shadow-light); }
 
 .nav.sticky {
-  position: fixed;
-  box-shadow: var(--box-shadow-light); }
+  position: fixed; }
 
 .header {
   height: 100vh;
@@ -272,7 +271,7 @@ hr {
   display: flex;
   justify-content: space-between; }
   .slide--main .herobg {
-    width: 45%;
+    width: 40%;
     justify-self: flex-end; }
   .slide--main__content {
     padding: 8rem 0 8rem 16rem;

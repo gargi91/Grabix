@@ -100,7 +100,7 @@ countBoxContainer.addEventListener("click", function (e) {
   }
 });
 
-setInterval(nextSlide, 100000);
+setInterval(nextSlide, 6000);
 
 // For testimonial slider
 const slider2 = document.querySelector(".slider-2");
