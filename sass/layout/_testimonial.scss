@@ -1,0 +1,98 @@
+.testimonials {
+  margin: 8rem;
+  height: 100vh;
+  padding: 8rem;
+  background-color: var(--color-grey-light);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .slider-2 {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .slider-2-btn {
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    font: inherit;
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0.4rem 1rem rgba($color: #000000, $alpha: 0.3);
+    }
+
+    &--left {
+      position: absolute;
+      bottom: 14rem;
+      left: 14rem;
+    }
+    &--right {
+      position: absolute;
+      bottom: 14rem;
+      right: 14rem;
+    }
+  }
+
+  .testimonial {
+    height: 100%;
+    padding: 3rem;
+    background-color: #fff;
+    display: flex;
+    // position: relative;
+    position: absolute;
+    top: 0;
+    /* THIS creates the animation! */
+    transition: transform 1s;
+
+    .user {
+      &__img {
+        height: 100%;
+        width: auto;
+        margin-right: 3rem;
+      }
+
+      &__content {
+        flex-grow: 1;
+        z-index: 90;
+      }
+
+      &__review {
+        margin-top: 3rem;
+        color: var(--color-primary);
+        font-size: 1.6rem;
+      }
+    }
+
+    .quote {
+      position: absolute;
+      bottom: 0rem;
+      right: 4rem;
+      width: 15rem;
+      opacity: 0.3;
+      z-index: -1;
+    }
+  }
+}
+
+.quote-icon {
+  height: 15rem;
+  width: auto;
+  position: absolute;
+  right: 5rem;
+  top: 10rem;
+  z-index: 100;
+}

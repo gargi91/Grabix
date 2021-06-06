@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
+        rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Grabix</title>
+</head>
+
+<body class="container">
+    <header class="header">
+        <nav class="nav sticky" id="nav-menu">
+            <a href="index.html" class="nav__logo">
+                <img src="img/grabix-logo.svg" alt="Grabix Logo">
+            </a>
+            <div class="nav__toggle">
+                <i class='bx bx-menu' id="nav__toggle"></i>
+            </div>
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a href="#" class="nav__link active">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Shop</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Offers</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Contact</a>
+                </li>
+                <li class="nav__item login-btn">
+                    <a href="#" class="nav__link login">Login</a>
+                </li>
+        </nav>
+
+        <div class="header__slider">
+            <div class="slider">
+                <div class="slide slide--main">
+                    <div class="slide--main__content">
+                        <h1 class="heading--1 heading--main">Grab deals up to
+                            <span>60%</span>
+                            off</h1>
+                        <p class="mb-md">From exclusive online stores</p>
+                        <button class="btn btn--dark">View all Offers</button>
+                    </div>
+                    <img class="herobg" src="img/HERO.png" alt="Photo 1" />
+                </div>
+                <div class="slide"><img src="img/img-1.jpg" alt="Photo 1" />
+                </div>
+                <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" />
+                </div>
+                <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" />
+                </div>
+                <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" />
+                </div>
+                <button class="slider__btn slider__btn--left">&larr;</button>
+                <button class="slider__btn slider__btn--right">&rarr;</button>
+                <!-- <div class="dots"></div> -->
+                <div class="count-boxes"></div>
+            </div>
+        </div>
+    </header>
+    <hr class="hr-1">
+    <!-- Services -->
+    <section class="services">
+
+        <div class="services__service">
+            <svg class="service__icon">
+                <use xlink:href="img/sprite.svg#payment-method" />
+            </svg>
+            <h4 class="heading--4 mb-sm">Mobile Recharge</h4>
+            <button class="btn btn-light btn-service">Shop &rarr;</button>
+        </div>
+        <div class="services__service">
+            <svg class="service__icon">
+                <use xlink:href="img/sprite.svg#passport" />
+            </svg>
+            <h4 class="heading--4 mb-sm">Travel Booking</h4>
+            <button class="btn btn-light btn-service">Shop &rarr;</button>
+        </div>
+        <div class="services__service">
+            <svg class="service__icon">
+                <use xlink:href="img/sprite.svg#offer" />
+            </svg>
+            <h4 class="heading--4 mb-sm">Cashbacks</h4>
+            <button class="btn btn-light btn-service">Shop &rarr;</button>
+        </div>
+        <div class="services__service">
+            <svg class="service__icon">
+                <use xlink:href="img/sprite.svg#movie" />
+            </svg>
+            <h4 class="heading--4 mb-sm">Movies</h4>
+            <button class="btn btn-light btn-service">Shop &rarr;</button>
+        </div>
+    </section>
+    <hr class="hr-1">
+
+    <!-- Popular online stores -->
+    <section class="stores">
+        <h1 class="heading--1 mb-md">Popular stores</h1>
+        <h2 class="heading--2 mb-lg">Get upto 50% off</h4>
+            <div class="stores__container">
+                <a href="#" class="stores__store">
+                    <img src="img/amazon.svg" alt="amazon"
+                        class="stores__store-icon">
+                </a>
+                <a href="#" class="stores__store">
+                    <img src="img/flipkart.svg" alt="flipkart"
+                        class="stores__store-icon">
+                </a>
+                <a href="#" class="stores__store">
+                    <img src="img/myntra.svg" alt="myntra"
+                        class="stores__store-icon">
+                </a>
+                <a href="#" class="stores__store">
+                    <img src="img/paytm.svg" alt="paytm"
+                        class="stores__store-icon">
+                </a>
+                <a href="#" class="stores__store">
+                    <img src="img/ajio.svg" alt="ajio"
+                        class="stores__store-icon">
+                </a>
+                <a href="#" class="stores__store">
+                    <img src="img/ebay.svg" alt="ebay"
+                        class="stores__store-icon">
+                </a>
+            </div>
+    </section>
+    <hr class="hr-1">
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h1 class="heading--1 mb-hg">Check out recent reviews</h1>
+        <div class="testimonial__container"></div>
+        <img src="img/quote-left.svg" alt="Left Quote" class="quote-icon">
+        <div class="slider-2">
+            <div class="testimonial testimonial--1 active">
+                <img src="img/user-1.jpg" alt="User Pic" class="user__img">
+                <div class="user__content">
+                    <h3 class="heading--3 user__name">Shruti Kaamle</h3>
+                    <hr class="hr-2">
+
+                    <div class="user__review">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Maxime beatae dolorum accusamus inventore debitis
+                        nam officia aliquam aut rerum. Sequi laborum eius vitae
+                        maxime praesentium molestias accusantium repellat natus
+                        ipsam.
+                    </div>
+                    <img src="img/quote-left-light.svg" class="quote">
+                </div>
+            </div>
+            <div class="testimonial testimonial--2">
+                <img src="img/user-2.jpg" alt="User Pic" class="user__img">
+                <div class="user__content">
+                    <h3 class="heading--3 user__name">Akash Rawat</h3>
+                    <hr class="hr-2">
+
+                    <div class="user__review">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Non rem repellendus excepturi ipsum, reiciendis
+                        totam animi illum dolores ipsam iure soluta in voluptas
+                        nostrum provident ratione facilis! Tempora, sint
+                        provident!
+                    </div>
+                    <img src="img/quote-left-light.svg" class="quote">
+                </div>
+            </div>
+            <div class="testimonial testimonial--3">
+                <img src="img/user-3.jpg" alt="User Pic" class="user__img">
+                <div class="user__content">
+                    <h3 class="heading--3 user__name">Esha Singh</h3>
+                    <hr class="hr-2">
+
+                    <div class="user__review">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolorem rerum officiis odio cum eos. Est praesentium
+                        expedita porro fugiat! Voluptas aliquid harum cumque
+                        odio ea beatae quos a. Enim, velit.
+                    </div>
+                    <img src="img/quote-left-light.svg" class="quote">
+                </div>
+            </div>
+            <div class="testimonial testimonial--3">
+                <img src="img/user-4.jpg" alt="User Pic" class="user__img">
+                <div class="user__content">
+                    <h3 class="heading--3 user__name">Arjun Deshmukh</h3>
+                    <hr class="hr-2">
+
+                    <div class="user__review">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Sapiente eaque molestias aliquam architecto nulla.
+                        Excepturi vitae porro omnis ea quod sit minus autem quos
+                        quam ducimus, incidunt maxime soluta! Totam.
+                    </div>
+                    <img src="img/quote-left-light.svg" class="quote">
+                </div>
+            </div>
+        </div>
+        <button class="slider-2-btn slider-2-btn--left">&larr;</button>
+        <button class="slider-2-btn slider-2-btn--right">&rarr;</button>
+        <div class="dots"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+
+    </footer>
+
+    <!-- JavaScript -->
+    <script src=" js/index.js"> </script>
+</body>
+
+</html>

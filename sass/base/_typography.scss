@@ -1,0 +1,79 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+.heading--1 {
+  font-family: var(--font-dispay);
+  font-weight: 800;
+  font-size: 4rem;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-transform: capitalize;
+}
+
+.heading--2 {
+  font-family: 600;
+  color: var(--color-secondary);
+  font-size: 2.5rem;
+}
+
+.heading--3 {
+  font-family: var(--font-dispay);
+  color: var(--color-grey-dark2);
+}
+
+.heading--4 {
+  font-family: var(--font-dispay);
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--color-grey-light);
+  text-transform: uppercase;
+}
+
+hr {
+  border: none;
+}
+
+.hr-1 {
+  margin: 0 auto;
+  width: 10%;
+  border-top: 0.3rem solid var(--color-grey-dark1);
+}
+
+.hr-2 {
+  margin-left: auto;
+  width: 80%;
+  border-top: 0.3rem solid var(--color-secondary);
+}
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: 300;
+  transform: translateY(0);
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: var(--box-shadow-light);
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-light {
+  background-color: var(--color-secondary);
+  color: var(--color-grey-dark2);
+}
+
+.btn--dark {
+  background-color: var(--color-grey-dark2);
+  color: var(--color-secondary);
+  letter-spacing: 1px;
+  padding: 1rem 1.5rem;
+}
