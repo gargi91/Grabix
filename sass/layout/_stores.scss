@@ -16,13 +16,18 @@
   }
 
   &__store {
-    height: 12rem;
-    width: 12rem;
+    height: 13rem;
+    width: 13rem;
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow-light);
     overflow: hidden;
     text-align: center;
     transition: all 0.2s;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    // justify-items: center;
 
     &:hover {
       box-shadow: var(--box-shadow);
@@ -32,8 +37,16 @@
   &__store-icon {
     // background-color: var(--color-grey-light);
     background-color: transparent;
-    padding: 2rem;
-    height: 100%;
-    width: 100%;
+    padding: 0.5rem;
+    height: 80%;
+    width: 80%;
+    justify-self: center;
+  }
+
+  &__offers {
+    background-color: var(--color-primary);
+    color: #fff;
+    align-self: end;
+    font-size: 1.6rem;
   }
 }

@@ -125,6 +125,14 @@ hr {
   justify-content: space-between;
   align-items: center; }
 
+.para {
+  color: var(--color-primary);
+  font-size: 1.6rem; }
+
+.para-sm {
+  color: var(--color-primary);
+  font-size: 1.4rem; }
+
 .nav {
   height: 9rem;
   font-size: 1.6rem;
@@ -402,9 +410,7 @@ hr {
       flex-grow: 1;
       z-index: 90; }
     .testimonials .testimonial .user__review {
-      margin-top: 3rem;
-      color: var(--color-primary);
-      font-size: 1.6rem; }
+      margin-top: 3rem; }
     .testimonials .testimonial .quote {
       position: absolute;
       bottom: 0rem;
@@ -435,20 +441,30 @@ hr {
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     grid-gap: 5rem; }
   .stores__store {
-    height: 12rem;
-    width: 12rem;
+    height: 13rem;
+    width: 13rem;
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow-light);
     overflow: hidden;
     text-align: center;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center; }
     .stores__store:hover {
       box-shadow: var(--box-shadow); }
   .stores__store-icon {
     background-color: transparent;
-    padding: 2rem;
-    height: 100%;
-    width: 100%; }
+    padding: 0.5rem;
+    height: 80%;
+    width: 80%;
+    justify-self: center; }
+  .stores__offers {
+    background-color: var(--color-primary);
+    color: #fff;
+    align-self: end;
+    font-size: 1.6rem; }
 
 .newsletter {
   width: 100%;
@@ -552,3 +568,126 @@ hr {
     font-size: 1.2rem;
     padding-top: 1rem;
     color: var(--color-primary-light); }
+
+.grid {
+  margin: 8rem; }
+  .grid__wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 5rem; }
+    .grid__wrapper--item {
+      height: 30rem;
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: var(--box-shadow-light);
+      overflow: hidden; }
+
+.offers__offer {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-grey-light);
+  position: relative; }
+  .offers__offer--img {
+    height: 30%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.363);
+    text-align: center; }
+    .offers__offer--img img {
+      height: 100%;
+      width: 100%; }
+  .offers__offer--content {
+    text-align: center; }
+  .offers__offer button {
+    width: 100%; }
+
+.hot-deals .grid__wrapper {
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); }
+  .hot-deals .grid__wrapper--item {
+    height: 20rem; }
+
+.hot-deals__item {
+  overflow: hidden;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-secondary); }
+
+.hot-deals__deal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-weight: 400;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1rem; }
+  .hot-deals__deal h5 {
+    color: var(--color-grey-dark1); }
+
+.hot-deals__img {
+  height: 100%; }
+
+.new-products .grid__wrapper--item {
+  height: 35rem; }
+
+.new-products__product {
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 5fr 1fr 1fr;
+  grid-gap: 1rem; }
+
+.new-products .new-product__discount-badge {
+  font-size: 1.4rem;
+  position: absolute;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  clip-path: polygon(0 1%, 94% 0, 83% 100%, 0% 100%);
+  grid-row: 1/2; }
+
+.new-products .new-product__brand {
+  background-color: var(--color-secondary);
+  text-align: end;
+  padding-right: 1rem;
+  margin-bottom: auto; }
+
+.new-products .new-product__img {
+  height: auto;
+  text-align: center;
+  margin: 0 auto auto;
+  padding: 1rem;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .new-products .new-product__img img {
+    height: 15rem;
+    width: auto; }
+  .new-products .new-product__img figcaption {
+    font-size: 1.4rem;
+    font-family: var(--font-display);
+    color: var(--color-primary); }
+
+.new-products .new-product__price {
+  grid-row: 3/4;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .new-products .new-product__price #price-original {
+    text-decoration: line-through;
+    color: var(--color-grey-dark1);
+    font-size: 1.5rem;
+    margin-right: 2rem; }
+  .new-products .new-product__price #price-sale {
+    font-weight: 600;
+    color: var(--color-grey-dark2); }
+
+.new-products .new-product__btn {
+  grid-row: 4/5;
+  align-self: center; }
