@@ -3,15 +3,19 @@
 	font-size: 1.5rem;
 	width: 100%;
 	padding: 0 8rem;
-	z-index: 100;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #fff;
 	// box-shadow: 0 0.4rem 1rem rgba($color: #000000, $alpha: 0.1);
 	text-transform: capitalize;
 	position: absolute;
-	z-index: 500;
+	z-index: 450;
+
+	@media only screen and (max-width: $bp-medium) {
+		font-size: 1.6rem;
+	}
 
 	&__logo {
 		img {
@@ -20,24 +24,69 @@
 		}
 	}
 
-	&__toggle {
+	&__toggle,
+	&__close {
 		display: none;
+
+		@media only screen and (max-width: $bp-medium) {
+			display: block;
+		}
+	}
+
+	&__icon {
+		height: 3rem;
+		width: 3rem;
 	}
 
 	&__links {
+		&--logo {
+			display: none;
+			margin-bottom: 3rem;
+			img {
+				height: 4rem;
+				width: auto;
+			}
+
+			@media only screen and (max-width: $bp-medium) {
+				display: block;
+			}
+		}
 		display: flex;
+		@media only screen and (max-width: $bp-medium) {
+			width: 30vw;
+			flex-direction: column;
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100vh;
+			overflow: scroll;
+			background-color: var(--color-secondary);
+			padding: 5rem;
+			transform: translateX(100%);
+		}
 	}
 
 	&__item {
 		padding: 0.5rem 1.5rem;
 		margin-left: 3rem;
 		a {
+			display: flex;
+			align-items: center;
 			color: var(--color-grey-dark1);
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			margin-left: 0;
+			padding-left: 0;
+			margin-bottom: 1rem;
 		}
 	}
 
 	&__item:last-child {
 		margin-left: 6rem;
+		@media only screen and (max-width: $bp-medium) {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -49,16 +98,27 @@
 .dropdown {
 	position: relative;
 
-	&:hover > &__menu {
+	.show-dropdown > &__menu {
 		height: auto;
 		opacity: 1;
+
+		@media only screen and (max-width: $bp-medium) {
+			display: block;
+		}
 	}
 
-	&:hover &__icon {
+	&.show-dropdown .icon-expand {
 		transform: rotateX(180deg);
 	}
 
 	&__icon {
+		height: 2rem;
+		width: 2rem;
+		fill: var(--color-grey-dark1);
+		margin-left: 0.5rem;
+	}
+
+	.icon-expand {
 		transition: all 0.2s ease-in;
 		transform: rotateX(0);
 	}
@@ -80,6 +140,13 @@
 		border-radius: 0 0 5px 5px;
 		transition: height 0.3s 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95),
 			opacity 400ms 0ms;
+
+		@media only screen and (max-width: $bp-medium) {
+			position: unset;
+			display: none;
+			overflow: unset;
+			background-color: transparent;
+		}
 	}
 
 	&__item {
@@ -96,5 +163,25 @@
 			cursor: pointer;
 			background-color: var(--color-primary-light);
 		}
+
+		@media only screen and (max-width: $bp-medium) {
+			padding-left: 3rem;
+		}
+
+		&:active {
+			@media only screen and (max-width: $bp-medium) {
+				color: var(--color-grey-dark2);
+			}
+		}
 	}
+}
+
+.show-nav {
+	transform: translateX(0);
+	transition: transform 0.5s ease-out;
+}
+
+.hide-nav {
+	transform: translateX(100%);
+	transition: transform 0.5s ease-out;
 }

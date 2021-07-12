@@ -1,3 +1,10 @@
+//Responsive Breakpoints
+$bp-big-desktop: 87.5em; //1400
+$bp-largest: 75em; // 1200px / 16 = 75em
+$bp-large: 62.5em; // 1000px / 16 = 62.5em
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+
 :root {
 	--color-primary: #013d3b;
 	--color-secondary: #f7d7be;
@@ -26,6 +33,17 @@
 html {
 	box-sizing: border-box;
 	font-size: 62.5%; // 10px/16px = 62.5%  ---- 1rem = 10px
+	@media only screen and (min-width: $bp-big-desktop) {
+		font-size: 75%;
+	}
+
+	@media only screen and (max-width: $bp-largest) {
+		font-size: 56.25%; //9px  ---> 1rem
+	}
+
+	@media only screen and (max-width: $bp-large) {
+		font-size: 50%; //8px  ---> 1rem
+	}
 }
 
 body {

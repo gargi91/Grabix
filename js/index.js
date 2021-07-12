@@ -1,8 +1,22 @@
 "use strict";
 
+// Slider variables
 const btnLeft = document.querySelector(".slider__btn--left");
 const btnRight = document.querySelector(".slider__btn--right");
 const slides = document.querySelectorAll(".slide");
+// For testimonial slider
+const slider2 = document.querySelector(".slider-2");
+const testimonials = document.querySelectorAll(".testimonial");
+const btnLeft2 = document.querySelector(".slider-2-btn--left");
+const btnRight2 = document.querySelector(".slider-2-btn--right");
+//For Navigation MenuBar
+const navbar = document.getElementById("nav-menu");
+const navToggleBtn = document.querySelector(".nav__toggle");
+const navCloseBtn = document.querySelector(".nav__close");
+const navLinksContainer = document.querySelector(".nav__links");
+const navMenuIcon = document.getElementById("icon-menu");
+const dropdowns = document.querySelectorAll(".dropdown");
+const navLinks = document.querySelectorAll(".nav__link");
 
 // Slider --1
 const maxSlide = slides.length;
@@ -102,11 +116,8 @@ countBoxContainer.addEventListener("click", function (e) {
 
 const timer = setInterval(nextSlide, 6000);
 
-// For testimonial slider
-const slider2 = document.querySelector(".slider-2");
-const testimonials = document.querySelectorAll(".testimonial");
-const btnLeft2 = document.querySelector(".slider-2-btn--left");
-const btnRight2 = document.querySelector(".slider-2-btn--right");
+/////////////////////////////////////////////////////////////
+//For Testimonial Slider
 
 const numTestimonials = testimonials.length;
 let currentTestimonial = 0;
@@ -151,3 +162,26 @@ btnLeft2.addEventListener("click", prevTestimonial);
 // curSlide = 1: -100%,0%,100%,200%
 
 setInterval(nextTestimonial, 6000);
+
+////////////////////////////////////////////////////////////
+//Responsive Navigation Menu Bar
+
+navToggleBtn.addEventListener("click", function () {
+	navLinksContainer.classList.add("show-nav");
+	navLinksContainer.classList.remove("hide-nav");
+});
+navCloseBtn.addEventListener("click", function () {
+	navLinksContainer.classList.remove("show-nav");
+	navLinksContainer.classList.add("hide-nav");
+});
+
+//open Dropdown
+const openDropdown = function (e) {
+	if (e.target.parentElement.classList.contains("dropdown")) {
+		e.target.parentElement.classList.toggle("show-dropdown");
+	}
+};
+
+navLinks.forEach((d) => {
+	d.addEventListener("click", openDropdown);
+});

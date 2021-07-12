@@ -10,9 +10,6 @@
         rel='stylesheet'>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link
-        href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
-        rel='stylesheet'>
-    <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <title>Grabix</title>
@@ -21,30 +18,44 @@
 <body class="container">
     <header class="header">
         <nav class="nav sticky" id="nav-menu">
+
             <a href="index.html" class="nav__logo">
                 <img src="img/grabix-logo.svg" alt="Grabix Logo">
             </a>
+
             <div class="nav__toggle">
-                <i class='bx bx-menu' id="nav__toggle"></i>
+                <svg class="nav__icon">
+                    <use xlink:href="img/sprite.svg#icon-menu" />
+                </svg>
             </div>
+
             <ul class="nav__links">
+                <div class="nav__close">
+                    <svg class="nav__icon">
+                        <use xlink:href="img/sprite.svg#icon-clear" />
+                    </svg>
+                </div>
                 <li class="nav__item dropdown">
                     <a href="#" class="nav__link active">All Products
-                        <i class='bx bx-chevron-down dropdown__icon'></i>
+                        <svg class="dropdown__icon icon-expand">
+                            <use xlink:href="img/sprite.svg#icon-expand_more" />
+                        </svg>
                     </a>
 
                     <ul class="dropdown__menu">
                         <li class="dropdown__item"><a href="#"
-                                class="nav__link">About me</a></li>
+                                class="dropdown__link">About me</a></li>
                         <li class="dropdown__item"><a href="#"
-                                class="nav__link">Location</a></li>
+                                class="dropdown__link">Location</a></li>
                         <li class="dropdown__item"><a href="#"
-                                class="nav__link">Studies</a></li>
+                                class="dropdown__link">Studies</a></li>
                     </ul>
                 </li>
                 <li class="nav__item dropdown">
                     <a href="#" class="nav__link">Stores
-                        <i class='bx bx-chevron-down dropdown__icon'></i>
+                        <svg class="dropdown__icon icon-expand">
+                            <use xlink:href="img/sprite.svg#icon-expand_more" />
+                        </svg>
                     </a>
                     <ul class="dropdown__menu">
                         <li class="dropdown__item"><a href="#"
@@ -64,7 +75,9 @@
                 </li>
                 <li class="nav__item dropdown">
                     <a href="#" class="nav__link login">My Account
-                        <i class='bx bx-user'></i>
+                        <svg class="dropdown__icon icon-user">
+                            <use xlink:href="img/sprite.svg#icon-user" />
+                        </svg>
                     </a>
                     <ul class="dropdown__menu">
                         <li class="dropdown__item"><a href="#"
