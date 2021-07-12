@@ -10,6 +10,9 @@
         rel='stylesheet'>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link
+        href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css'
+        rel='stylesheet'>
+    <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&family=Roboto&display=swap">
     <link rel="stylesheet" href="css/style.css">
     <title>Grabix</title>
@@ -25,20 +28,52 @@
                 <i class='bx bx-menu' id="nav__toggle"></i>
             </div>
             <ul class="nav__links">
-                <li class="nav__item">
-                    <a href="#" class="nav__link active">Home</a>
+                <li class="nav__item dropdown">
+                    <a href="#" class="nav__link active">All Products
+                        <i class='bx bx-chevron-down dropdown__icon'></i>
+                    </a>
+
+                    <ul class="dropdown__menu">
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">About me</a></li>
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">Location</a></li>
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">Studies</a></li>
+                    </ul>
+                </li>
+                <li class="nav__item dropdown">
+                    <a href="#" class="nav__link">Stores
+                        <i class='bx bx-chevron-down dropdown__icon'></i>
+                    </a>
+                    <ul class="dropdown__menu">
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">About me and stores here</a>
+                        </li>
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">Location</a></li>
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">Studies</a></li>
+                    </ul>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link">Shop</a>
+                    <a href="#" class="nav__link">Top Deals</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#" class="nav__link">Offers</a>
+                    <a href="#" class="nav__link">About</a>
                 </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Contact</a>
-                </li>
-                <li class="nav__item login-btn">
-                    <a href="#" class="nav__link login">Login</a>
+                <li class="nav__item dropdown">
+                    <a href="#" class="nav__link login">My Account
+                        <i class='bx bx-user'></i>
+                    </a>
+                    <ul class="dropdown__menu">
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">About me</a></li>
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">Location</a></li>
+                        <li class="dropdown__item"><a href="#"
+                                class="nav__link">Studies</a></li>
+                    </ul>
                 </li>
         </nav>
 
