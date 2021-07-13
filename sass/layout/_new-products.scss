@@ -1,6 +1,12 @@
 .new-products {
 	.grid__wrapper--item {
 		height: 35rem;
+
+		@media only screen and (max-width: $bp-small) {
+			height: 45rem;
+			width: 32rem;
+			justify-self: center;
+		}
 	}
 	&__product {
 		overflow: hidden;
@@ -19,6 +25,13 @@
 			padding: 0.5rem 2rem 0.5rem 1rem;
 			clip-path: polygon(0 1%, 94% 0, 83% 100%, 0% 100%);
 			grid-row: 1/2;
+
+			@media only screen and (max-width: $bp-small) {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				// padding: 0;
+			}
 		}
 
 		&__brand {
@@ -26,6 +39,12 @@
 			text-align: end;
 			padding-right: 1rem;
 			margin-bottom: auto;
+			@media only screen and (max-width: $bp-small) {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
 		}
 
 		&__img {
@@ -40,10 +59,14 @@
 			img {
 				height: 15rem;
 				width: auto;
+
+				@media only screen and (max-width: $bp-small) {
+					height: 24rem;
+				}
 			}
 
 			figcaption {
-				font-size: 1.4rem;
+				font-size: 1.5rem;
 				font-family: var(--font-display);
 				color: var(--color-primary);
 			}

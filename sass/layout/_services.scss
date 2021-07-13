@@ -1,37 +1,54 @@
 .services {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  grid-gap: 6rem;
-  margin: 8rem;
+	display: grid;
+	grid-template-rows: auto;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	grid-gap: 6rem;
+	margin: 8rem;
 
-  &__service {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    padding: 3rem 3rem;
-    border-radius: 0.3rem;
-    text-align: center;
-    position: relative;
-    box-shadow: var(--box-shadow);
+	@media only screen and (max-width: $bp-large) {
+		margin: 8rem 5rem;
+	}
 
-    .service__icon {
-      height: 4.5rem;
-      width: 4.5rem;
-      fill: var(--color-secondary);
-    }
-  }
+	@media only screen and (max-width: $bp-medium) {
+		grid-gap: 4rem;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		margin: 5rem 3rem;
+		grid-gap: 3rem;
+	}
+
+	&__service {
+		background-color: var(--color-primary);
+		color: var(--color-secondary);
+		padding: 3rem 3rem;
+		border-radius: 0.3rem;
+		text-align: center;
+		position: relative;
+		box-shadow: var(--box-shadow);
+
+		@media only screen and (max-width: $bp-medium) {
+			padding: 3rem 2rem;
+		}
+
+		.service__icon {
+			height: 4.5rem;
+			width: 4.5rem;
+			fill: var(--color-secondary);
+		}
+	}
 }
 
 .btn-service {
-  position: absolute;
-  left: 50%;
-  top: 90%;
-  transform: translate(-50%, 0);
-  transition: all 0.2s;
-  &:hover {
-    transform: translate(-50%, -3px);
-  }
-  &:active {
-    transform: translate(-50%, 0);
-  }
+	position: absolute;
+	left: 50%;
+	top: 90%;
+	transform: translate(-50%, 0);
+	transition: all 0.2s;
+	&:hover {
+		transform: translate(-50%, -3px);
+	}
+	&:active {
+		transform: translate(-50%, 0);
+	}
 }

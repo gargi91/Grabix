@@ -114,7 +114,7 @@ countBoxContainer.addEventListener("click", function (e) {
 	}
 });
 
-const timer = setInterval(nextSlide, 6000);
+const timer = setInterval(nextSlide, 600000);
 
 /////////////////////////////////////////////////////////////
 //For Testimonial Slider
@@ -177,8 +177,15 @@ navCloseBtn.addEventListener("click", function () {
 
 //open Dropdown
 const openDropdown = function (e) {
-	if (e.target.parentElement.classList.contains("dropdown")) {
-		e.target.parentElement.classList.toggle("show-dropdown");
+	// if (e.target.parentElement.classList.contains("dropdown")) {
+	// 	e.target.parentElement.classList.toggle("show-dropdown");
+	// }
+	if (
+		(e.target.classList.contains("nav__link") ||
+			e.target.parentElement.classList.contains("nav__link")) &&
+		e.target.closest(".nav__item").classList.contains("dropdown")
+	) {
+		e.target.closest(".dropdown").classList.toggle("show-dropdown");
 	}
 };
 

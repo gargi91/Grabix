@@ -1,52 +1,62 @@
 .stores {
-  margin: 8rem;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	margin: 8rem;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
-  &__container {
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	@media only screen and (max-width: $bp-large) {
+		margin: 8rem 5rem;
+	}
 
-    grid-gap: 5rem;
-  }
+	@media only screen and (max-width: $bp-small) {
+		margin: 5rem 3rem;
+	}
 
-  &__store {
-    height: 13rem;
-    width: 13rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--box-shadow-light);
-    overflow: hidden;
-    text-align: center;
-    transition: all 0.2s;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    align-items: center;
-    // justify-items: center;
+	&__container {
+		width: 100%;
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+		grid-gap: 5rem;
 
-    &:hover {
-      box-shadow: var(--box-shadow);
-    }
-  }
+		@media only screen and (max-width: $bp-medium) {
+			grid-gap: 3rem;
+		}
+	}
 
-  &__store-icon {
-    // background-color: var(--color-grey-light);
-    background-color: transparent;
-    padding: 0.5rem;
-    height: 80%;
-    width: 80%;
-    justify-self: center;
-  }
+	&__store {
+		height: 13rem;
+		width: 13rem;
+		border-radius: 0.5rem;
+		box-shadow: var(--box-shadow-light);
+		overflow: hidden;
+		text-align: center;
+		transition: all 0.2s;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		align-items: center;
 
-  &__offers {
-    background-color: var(--color-primary);
-    color: #fff;
-    align-self: end;
-    font-size: 1.6rem;
-  }
+		&:hover {
+			box-shadow: var(--box-shadow);
+		}
+	}
+
+	&__store-icon {
+		// background-color: var(--color-grey-light);
+		background-color: transparent;
+		padding: 0.5rem;
+		height: 80%;
+		width: 80%;
+		justify-self: center;
+	}
+
+	&__offers {
+		background-color: var(--color-primary);
+		color: #fff;
+		align-self: flex-end;
+		font-size: 1.6rem;
+	}
 }

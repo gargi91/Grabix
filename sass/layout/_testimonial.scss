@@ -1,96 +1,198 @@
 .testimonials {
-  margin: 8rem;
-  height: 100vh;
-  padding: 8rem;
-  background-color: var(--color-grey-light);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	margin: 8rem;
+	height: 95vh;
+	padding: 8rem;
+	background-color: var(--color-grey-light);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
-  .slider-2 {
-    width: 80%;
-    height: 80%;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    border-radius: 0.5rem;
-    overflow: hidden;
-  }
+	@media only screen and (max-width: $bp-largest) {
+		height: 90vh;
+	}
 
-  .slider-2-btn {
-    border: none;
-    border-radius: 50%;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    font: inherit;
-    height: 5rem;
-    width: 5rem;
-    padding: 1rem;
-    transition: all 0.2s;
+	@media only screen and (max-width: $bp-large) {
+		margin: 8rem 5rem;
+	}
 
-    &:hover {
-      cursor: pointer;
-      box-shadow: 0 0.4rem 1rem rgba($color: #000000, $alpha: 0.3);
-    }
+	@media only screen and (max-width: $bp-medium) {
+		height: 60vh;
+		padding: 8rem 5rem;
+	}
 
-    &--left {
-      position: absolute;
-      bottom: 14rem;
-      left: 14rem;
-    }
-    &--right {
-      position: absolute;
-      bottom: 14rem;
-      right: 14rem;
-    }
-  }
+	@media only screen and (max-width: $bp-small) {
+		height: 80vh;
+		padding: 4rem 3rem;
+		margin: 3rem 0rem;
+	}
 
-  .testimonial {
-    height: 100%;
-    padding: 3rem;
-    background-color: #fff;
-    display: flex;
-    // position: relative;
-    position: absolute;
-    top: 0;
-    /* THIS creates the animation! */
-    transition: transform 1s;
+	@media only screen and (min-width: $bp-big-desktop) {
+		height: 90vh;
+	}
 
-    .user {
-      &__img {
-        height: 100%;
-        width: auto;
-        margin-right: 3rem;
-      }
+	h1.heading--1 {
+		@media only screen and (max-width: $bp-small) {
+			text-align: center;
+			font-size: 2.5rem;
+		}
+	}
 
-      &__content {
-        flex-grow: 1;
-        z-index: 90;
-      }
+	.slider-2 {
+		width: 80%;
+		height: 80%;
+		position: relative;
+		overflow: hidden;
+		box-shadow: var(--box-shadow);
+		border-radius: 0.5rem;
+		overflow: hidden;
+		@media only screen and (max-width: $bp-medium) {
+			width: 83%;
+		}
 
-      &__review {
-        margin-top: 3rem;
-      }
-    }
+		@media only screen and (max-width: $bp-small) {
+			width: 100%;
+			height: 100%;
+		}
+	}
 
-    .quote {
-      position: absolute;
-      bottom: 0rem;
-      right: 4rem;
-      width: 15rem;
-      opacity: 0.3;
-      z-index: -1;
-    }
-  }
+	.slider-2-btn {
+		border: none;
+		border-radius: 50%;
+		background-color: var(--color-primary);
+		color: var(--color-secondary);
+		font: inherit;
+		height: 5rem;
+		width: 5rem;
+		padding: 1rem;
+		transition: all 0.2s;
+
+		@media only screen and (max-width: $bp-medium) {
+			height: 4.5rem;
+			width: 4.5rem;
+			padding: 0.2rem;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			height: 4rem;
+			width: 4rem;
+		}
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 0.4rem 1rem rgba($color: #000000, $alpha: 0.3);
+		}
+
+		&--left {
+			position: absolute;
+			bottom: 14rem;
+			left: 14rem;
+			@media only screen and (max-width: $bp-medium) {
+				left: 9rem;
+				bottom: 12rem;
+			}
+
+			@media only screen and (max-width: $bp-small) {
+				top: 50%;
+				left: 2rem;
+			}
+		}
+		&--right {
+			position: absolute;
+			bottom: 14rem;
+			right: 14rem;
+			@media only screen and (max-width: $bp-medium) {
+				right: 9rem;
+				bottom: 12rem;
+			}
+			@media only screen and (max-width: $bp-small) {
+				top: 50%;
+				right: 2rem;
+			}
+		}
+	}
+
+	.testimonial {
+		height: 100%;
+		padding: 3rem;
+		background-color: #fff;
+		display: flex;
+		position: absolute;
+		top: 0;
+		/* THIS creates the animation! */
+		transition: transform 1s;
+
+		@media only screen and (max-width: $bp-medium) {
+			flex-direction: column;
+			padding: 5rem;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			padding: 2rem;
+		}
+
+		.user {
+			&__img {
+				height: 100%;
+				width: auto;
+				margin-right: 3rem;
+
+				@media only screen and (max-width: $bp-medium) {
+					height: 50%;
+					width: auto;
+					margin-right: 0;
+					margin-bottom: 3rem;
+					border-radius: 5px;
+				}
+				@media only screen and (max-width: $bp-small) {
+					margin-bottom: 1.5rem;
+					height: 30%;
+				}
+			}
+
+			&__content {
+				flex-grow: 1;
+				z-index: 90;
+			}
+
+			&__review {
+				margin-top: 3rem;
+				@media only screen and (max-width: $bp-small) {
+					margin-top: 1.5rem;
+				}
+			}
+		}
+
+		.quote {
+			position: absolute;
+			bottom: 0rem;
+			right: 4rem;
+			width: 15rem;
+			opacity: 0.3;
+			z-index: -1;
+		}
+	}
 }
 
 .quote-icon {
-  height: 15rem;
-  width: auto;
-  position: absolute;
-  right: 5rem;
-  top: 10rem;
-  z-index: 100;
+	height: 14rem;
+	width: auto;
+	position: absolute;
+	right: 5rem;
+	top: 12rem;
+	z-index: 100;
+
+	@media only screen and (max-width: $bp-medium) {
+		height: 10rem;
+		top: 14rem;
+	}
+	@media only screen and (max-width: $bp-small) {
+		height: 8rem;
+		top: 20%;
+		right: 4rem;
+	}
 }

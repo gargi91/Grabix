@@ -1,29 +1,34 @@
 .mb-hg {
-  margin-bottom: 5rem;
+	margin-bottom: 5rem;
 }
 .mb-lg {
-  margin-bottom: 4rem;
+	margin-bottom: 4rem;
 }
 .mb-md {
-  margin-bottom: 3rem;
+	margin-bottom: 3rem;
 }
 .mb-sm {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .section-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media only screen and (max-width: $bp-small) {
+		flex-direction: column;
+		text-align: center;
+	}
 }
 
 .para {
-  color: var(--color-primary);
-  font-size: 1.6rem;
+	color: var(--color-primary);
+	font-size: 1.6rem;
 }
 
 .para-sm {
-  color: var(--color-primary);
-  font-size: 1.4rem;
+	color: var(--color-primary);
+	font-size: 1.4rem;
 }

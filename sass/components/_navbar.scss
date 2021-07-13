@@ -13,10 +13,17 @@
 	position: absolute;
 	z-index: 450;
 
+	@media only screen and (max-width: $bp-large) {
+		padding: 0 5rem;
+	}
+
 	@media only screen and (max-width: $bp-medium) {
 		font-size: 1.6rem;
 	}
 
+	@media only screen and (max-width: $bp-small) {
+		padding: 0 3rem;
+	}
 	&__logo {
 		img {
 			height: 4.5rem;
@@ -53,7 +60,7 @@
 		}
 		display: flex;
 		@media only screen and (max-width: $bp-medium) {
-			width: 30vw;
+			width: 40vw;
 			flex-direction: column;
 			position: absolute;
 			top: 0;
@@ -63,6 +70,10 @@
 			background-color: var(--color-secondary);
 			padding: 5rem;
 			transform: translateX(100%);
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			width: 70vw;
 		}
 	}
 

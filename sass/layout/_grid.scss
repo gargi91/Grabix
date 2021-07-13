@@ -1,11 +1,21 @@
 .grid {
 	margin: 8rem;
-	//   background-color: pink;
+	@media only screen and (max-width: $bp-large) {
+		margin: 8rem 5rem;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		margin: 5rem 3rem;
+	}
 
 	&__wrapper {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 		grid-gap: 5rem;
+
+		@media only screen and (max-width: $bp-small) {
+			grid-template-columns: 1fr;
+		}
 
 		&--item {
 			height: 30rem;
@@ -13,6 +23,10 @@
 			border-radius: 1rem;
 			box-shadow: var(--box-shadow-light);
 			overflow: hidden;
+
+			@media only screen and (max-width: $bp-small) {
+				height: 40rem;
+			}
 		}
 	}
 }

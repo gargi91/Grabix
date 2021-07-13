@@ -3,10 +3,26 @@
 	display: flex;
 	flex-direction: column;
 
+	@media only screen and (max-width: $bp-medium) {
+		height: 50vh;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		height: 100vw;
+	}
+
 	&__slider {
 		margin-top: 9rem;
 		padding: 0 8rem 6rem;
 		height: 100vh;
+
+		@media only screen and (max-width: $bp-large) {
+			padding: 0 5rem 6rem;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			padding: 0 3rem 6rem;
+		}
 	}
 }
 
@@ -57,6 +73,10 @@
 	width: 5rem;
 	font-size: 3.25rem;
 	cursor: pointer;
+
+	@media only screen and (max-width: $bp-small) {
+		display: none;
+	}
 }
 
 .slider__btn--left {
@@ -138,20 +158,44 @@
 
 .slide--main {
 	background-color: #e5e5e5;
+	background-image: url("../../img/heroBanner.png");
+	background-size: cover;
+	background-position: top;
+	// background-origin: padding-box;
 	display: flex;
 	justify-content: space-between;
 
-	.herobg {
-		width: 40%;
-		justify-self: flex-end;
-	}
+	// .herobg {
+	// 	width: 40%;
+	// 	justify-self: flex-end;
+
+	// 	@media only screen and (max-width: $bp-large) {
+	// 		height: 100%;
+	// 		width: auto;
+	// 	}
+
+	// 	@media only screen and (max-width: $bp-small) {
+	// 		height: 70%;
+	// 	}
+	// }
 	&__content {
 		padding: 8rem 0 8rem 16rem;
 		width: 50%;
 		height: 100%;
 
-		h1 {
-			text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+		@media only screen and (max-width: $bp-large) {
+			padding: 8rem 0 8rem 12rem;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			height: 70%;
+			padding: 3rem;
+		}
+
+		p {
+			@media only screen and (max-width: $bp-small) {
+				font-size: 1.4rem;
+			}
 		}
 
 		h1.heading--main {
@@ -159,9 +203,17 @@
 			font-weight: 600;
 			line-height: 1.4;
 
+			@media only screen and (max-width: $bp-small) {
+				font-size: 1.6rem;
+			}
+
 			span {
 				font-size: 6rem;
 				font-weight: 800;
+
+				@media only screen and (max-width: $bp-small) {
+					font-size: 2rem;
+				}
 			}
 		}
 	}
@@ -198,5 +250,11 @@
 			top: 18%;
 			left: 68%;
 		}
+	}
+}
+
+.btn-slide-main {
+	@media only screen and (max-width: $bp-small) {
+		display: none;
 	}
 }
