@@ -179,7 +179,8 @@ hr {
     height: 4.5rem;
     width: auto; }
   .nav__toggle, .nav__close {
-    display: none; }
+    display: none;
+    width: max-content; }
     @media only screen and (max-width: 50em) {
       .nav__toggle, .nav__close {
         display: block; } }

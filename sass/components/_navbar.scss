@@ -34,6 +34,7 @@
 	&__toggle,
 	&__close {
 		display: none;
+		width: max-content;
 
 		@media only screen and (max-width: $bp-medium) {
 			display: block;
