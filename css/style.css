@@ -111,9 +111,6 @@ hr {
     transform: translateY(-3px); }
   .btn:active {
     transform: translateY(0); }
-  @media only screen and (max-width: 37.5em) {
-    .btn {
-      padding: 1rem 1.75rem; } }
 
 .btn-light {
   background-color: var(--color-secondary);
