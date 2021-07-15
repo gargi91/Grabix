@@ -9,22 +9,21 @@
 		position: relative;
 
 		@media only screen and (max-width: $bp-small) {
-			height: 45rem;
-			width: 32rem;
+			// height: 45rem;
+			width: 30rem;
 			justify-self: center;
 		}
 
 		&--img {
 			height: 30%;
 			width: 100%;
-			background-color: rgba(255, 255, 255, 0.363);
 			text-align: center;
 
-			@media only screen and (max-width: $bp-small) {
-				height: 45%;
-			}
+			// @media only screen and (max-width: $bp-small) {
+			// 	height: 45%;
+			// }
 			img {
-				height: 100%;
+				height: auto;
 				width: 100%;
 			}
 		}
